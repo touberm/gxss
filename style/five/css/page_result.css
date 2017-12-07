@@ -1,0 +1,107 @@
+/* reset */
+h1,h2,h3,h4,h5,h6,p,input,seletc,fieldset{margin:0;padding:0;}
+body{font-size:18px;font-family: 'Microsoft YaHei';}
+
+
+
+.clear_both::after{content: "";display: block;clear:both;}
+.fl{float:left;}
+.fr{float:right;}
+span{display: inline-block;}
+
+#result{background-color:#edd69f;}
+#result .main{width:768px;text-align: justify;margin:0 auto;}
+#result .sec{ background-color:#f9f4e8; width:768px; padding:20px 34px; margin-bottom:30px;border-radius: 6px;}
+#result .sec .top .tt1{width:100px;vertical-align: top;}
+#result .sec .top img.line{width:500px;vertical-align: top;}
+#result .sec .top span.line_span{width:500px;display: inline-block;border-top:2px solid #ebce95;margin-top:10px;}
+#result .sec .top .tt{width:100px;vertical-align: top;}
+
+#result .header{font-size:22px;}
+#result .header h2{text-align: center;line-height: 60px;}
+#result .header .tag{padding-right: 10px;width: auto;}
+#result .header .val{padding-right:40px;}
+
+
+
+#result .tag{width:60px;vertical-align:top;}
+
+
+
+
+
+#result .sec .tag{color:#fba400;}
+#result .info .unit{vertical-align: top;}
+#result .info .ps{vertical-align: middle;padding-top:20px;}
+#result .info .line{padding-bottom: 20px;}
+#result .info .val{color:#666;}
+
+
+#result .info .flow{text-align: center;}
+#result .info .flow:after{content: '';display: block;}
+#result .info .flow .unit{width:140px;}
+#result .info .flow .ps{width:80px;}
+
+/* 乾造 */
+#result .qz .tag{line-height: 60px;}
+#result .qz .attr_t{color:#994a0a;}
+#result .qz .attr_val{color:#e90101;font-size: 22px; font-weight: bold;}
+#result .qz .ps{color:#000;}
+
+
+#result table.dy{border-collapse: collapse;text-align: center;width:700px;}
+#result table.dy td{border:2px solid #e9a94f;line-height: 30px;}
+#result table.dy tr.shishen{color:#00b0f0;}
+#result table.dy tr.tgdz{color:#00b050;}
+#result table.dy tr.age{color:#7d3d01;}
+
+#result table.liunian{border-collapse: collapse;text-align: center;width:700px;}
+#result table tr.year{color:#fba400;}
+#result table.liunian td{border:2px solid #e9a94f;line-height: 30px;}
+#result table.liunian .tgdz{color:#7d3d01;}
+
+
+#result .article h3{color:#e51c23;text-align: center;}
+#result .article p{text-indent: 2em;}
+#result .article p.hint{margin-top:20px;}
+#result .article p a{color:#0062cc;}
+
+
+@media(max-width:767px){
+  *{box-sizing: border-box;}
+  body{font-size:14px;}
+  #result .main{width:96vw;}
+  #result .sec{width:96vw; padding:3vw; margin-bottom:30px;}
+
+
+  #result .header{margin-bottom: 30px;font-size:16px;}
+  #result .header h2{line-height: 60px;font-size: 22px;}
+  #result .header .tag{padding-left:0;}
+  #result .header .val{padding-right:5px;}
+
+  #result .sec .top .tt1{width:20vw;}
+  #result .sec .top span.line_span{width:50vw;}
+  #result .sec .top .tt{width:20vw;}
+
+  #result .info .flow{width:80vw;}
+  #result .info .flow .unit{width:18vw;}
+  #result .info .flow .ps{width:8vw;}
+
+  /* 乾造 */
+  #result .info .tag_flow{width:10vw;}
+  #result .qz .attr_val{font-size: 20px;}
+  #result .qz .ps{font-size: 9px;}
+
+
+  #result table.dy{width:90vw;font-size:12px;}
+  #result table.dy td{border:1px solid #e9a94f;line-height:20px;}
+  
+  #result table.liunian{width:90vw;font-size: 12px;}
+  #result table.liunian td{border:1px solid #e9a94f;line-height: 20px;}
+
+
+  
+ 
+
+
+}

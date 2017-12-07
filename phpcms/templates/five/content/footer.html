@@ -1,0 +1,108 @@
+    <div class="bottom_box" >
+			<div class="db_content">
+				<div class="db_com row">
+					<div class="dbc_c2">
+						<div class="row">
+							<div class="col-xs-12 col-sm-8 dv2">
+								<ul>
+									<li class="col-xs-12 col-sm-4">
+										<div class="tits">
+											{$CATEGORYS[21][catname]}
+										</div>
+										<ul>
+                      {pc:content action="lists" catid="21" num="8" siteid="$siteid" order="listorder ASC" moreinfo="1"}
+                      {loop $data $r}
+                      <li>
+												<a href="{$r[url]}">{$r[title]}</a>
+											</li>
+                      {/loop}
+											{/pc}
+											<li>
+												<a href="{$CATEGORYS[22][url]}">{$CATEGORYS[22][catname]}</a>
+											</li>
+											<li>
+												<a href="{$CATEGORYS[24][url]}">{$CATEGORYS[24][catname]}</a>
+											</li>
+											
+										</ul>
+									</li>
+									<li class="col-xs-12 col-sm-4">
+										<div class="tits">
+											服务体系
+										</div>
+										<ul>
+                      <li>
+												<a href="{$CATEGORYS[27][url]}">{$CATEGORYS[27][catname]}</a>
+											</li>
+											<li>
+												<a href="{$CATEGORYS[23][url]}">{$CATEGORYS[23][catname]}</a>
+											</li>
+											<li>
+												<a href="{$CATEGORYS[20][url]}" target="_blank">{$CATEGORYS[20][catname]}</a>
+											</li>
+										</ul>
+									</li>
+									<li class="col-xs-12 col-sm-4">
+										<div class="tits">
+											{$CATEGORYS[25][catname]}
+										</div>
+										<ul>
+											{pc:content action="lists" catid="25" num="8" siteid="$siteid" order="listorder ASC" moreinfo="1"}
+                      {loop $data $r}
+                      <li>
+												<a href="{$r[url]}">{$r[title]}</a>
+											</li>
+                      {/loop}
+                      {/pc}
+                      <li>
+												<a href="{$CATEGORYS[26][url]}">{$CATEGORYS[26][catname]}</a>
+											</li>
+											<li>
+												<a href="{$CATEGORYS[28][url]}">{$CATEGORYS[28][catname]}</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="col-xs-6 col-xs-offset-3 col-sm-2 col-sm-offset-0 dv1">
+								<div class="d1">
+									<img src="/gxss/style/five/images/gfwb.jpg" />
+								</div>
+								<div>
+									官方微博
+								</div>
+							</div>
+							<div class="clearfix visible-xs-block"></div>
+							<div class="col-xs-6 col-xs-offset-3 col-sm-2 col-sm-offset-0 dv1">
+								<div class="d1">
+									<img src="/gxss/style/five/images/gfwx.jpg" />
+								</div>
+								<div>
+									官方微信
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="db_contents">
+				<div class="db_c_com beian" >
+					观象授时 版权所有 <a href="http://www.miitbeian.gov.cn/" style="color:#fff;">京ICP备17058324号</a>  <br class='phone_show'>咨询热线：010-60846113				
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+

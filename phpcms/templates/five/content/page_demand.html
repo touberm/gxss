@@ -1,0 +1,160 @@
+{template "content","header"}
+<link rel="stylesheet" href="/gxss/style/five/css/page_demand.css">
+
+<div class="main_box main_box_style">
+  <div id="main">
+    <h2>个人信息</h2>
+    <form>
+      
+      <p class="unit">
+        <label for="name" class="title">姓&nbsp;&nbsp;名:</label>
+        <input class="input" type="text" id="name" name="name" value="请输入您的姓名">
+      </p>
+      
+      <p class="unit">
+        <label for="" class="title">性&nbsp;&nbsp;别:</label>
+        <input type="radio" name="sex"  class="sex check" value="male" id="male">
+        <label for="male"  class="sex">男</label>
+        <input type="radio" name="sex"  class="sex check" value="female" id="female">
+        <label for="female" class="sex">女</label>
+      </p>
+      <!-- My97 -->
+      
+      <p class="unit">
+        <label for="" class="title">出生日期:</label>
+        <script language="javascript" type="text/javascript" src="/gxss/style/five/js/datepicker/WdatePicker.js"></script>
+        <input class="input" id="d11" type="text" onClick="WdatePicker({dateFmt:'yyyy-M-d HH时',skin:'twoer',vel:'birth'})"/>
+      </p>
+      <input type="hidden" id="birth">
+
+
+      <!-- csSelect -->
+      <fieldset id="global_location" class="clear_both unit">
+        <label for="" class="title ">出生地:</label>
+        <div class="place">
+          <select class="state input" data-first-title="选择省份" disabled="disabled"></select>
+          <select class="city input" disabled="disabled"></select>
+          <select class="region input" disabled="disabled"></select>
+        </div>
+      </fieldset>
+
+
+      <script src="http://www.jq22.com/jquery/2.1.1/jquery.min.js"></script>
+      
+      <script src="/gxss/style/five/js/cxSelect/jquery.cxselect.min.js"></script>
+      
+      <script>
+      
+      $.cxSelect.defaults.url = '/gxss/style/five/js/cxSelect/cityData.min.json';
+      $('#global_location').cxSelect({
+        url: '/gxss/style/five/js/cxSelect/cityData.min.json',
+        selects: [ 'state', 'city', 'region'],
+        nodata:'none'
+      });
+      </script>
+
+      
+      <p class="unit">
+        <label for="" class="title">是否阴历:</label>
+        <input type="radio" name="lunar" class="lunar check" value="lf" id="lf">
+        <label for="lf"  class="lunar">否</label>
+        <input type="radio" name="lunar" class="lunar check" value="lt" id="lt">
+        <label for="lt" class="lunar">是</label>
+      </p>
+      
+      <p class="unit">
+        <label for="" class="overlangth title">是否使用真太阳时:</label>
+        <input type="radio" name="sun" class="sun check" value="sf" id="sf">
+        <label for="sf"  class="sun">否</label>
+        <input type="radio" name="sun" class="sun check" value="st" id="st">
+        <label for="st" class="sun">是</label>
+      </p>
+      <p>
+        <span class="title empty"></span>
+        <input type="button" value="提交" id='sub'>
+      </p>
+    </form>
+  </div>
+  
+
+</div>
+<script>
+$(function(){
+  var name,sex,birth,place,lunar,sun,info;
+
+  $('#name').on('focus',function(){
+    if($(this).val() == '请输入您的姓名'){
+      $(this).val('');
+    }
+  }).on('blur',function(){
+    if($(this).val() == ''){
+      $(this).val('请输入您的姓名');
+    }
+  })
+
+  $('#sub').on('click',function(){
+
+    if($('#name').val() != '' && $('#name').val() != '请输入您的姓名' ){
+      name = $('#name').val();
+    }else{
+      alert('请输入正确的姓名!');
+      return;
+    }
+    
+    sex = $('input.sex:checked').val();
+    birth = $('#birth').val();
+    if($('#global_location .region').css('display') != 'none'){
+      if($('#global_location .region').val() != 0){
+        place = $('#global_location .region').val();
+        console.log('region');
+      }else{
+        alert('请选择出生地!');
+        return;
+      }
+    }else{
+      if($('#global_location .city').val() != 0){
+        place = $('#global_location .city').val();
+        console.log('city');
+      }else{
+        alert('请选择出生地!');
+        return;
+      }
+    } 
+    /* place = $('#global_location .region option:selected').val() || $('#global_location .city option:selected').val(); */
+
+    
+    lunar = $('input.lunar:checked').val();
+    sun = $('input.sun:checked').val();
+
+
+    if(name && sex && birth && place && lunar && sun){
+      console.log('name:'+name +', sex:'+sex+', birth:'+birth+', place:'+place+', lunar:'+lunar+', sun:'+sun);
+      info={
+        name:name,
+        sex:sex,
+        birth:birth,
+        place:place,
+        lunar:lunar,
+        sun:sun
+      }
+      console.log(info);
+
+
+
+
+
+
+
+    }else{
+      alert('请将信息填写完整!');
+      return;
+    }
+    
+    
+  })
+  
+})
+</script>
+<script src="/gxss/style/five/js/page_demand.js"></script>
+
+{template "content","footer"}
