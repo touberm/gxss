@@ -9,7 +9,7 @@ body{font-size:18px;font-family: 'Microsoft YaHei';}
 .fr{float:right;}
 span{display: inline-block;}
 
-#result{background-color:#edd69f;}
+#result{background-color:#edd69f;padding:30px 0;}
 #result .main{width:768px;text-align: justify;margin:0 auto;}
 #result .sec{ background-color:#f9f4e8; width:768px; padding:20px 34px; margin-bottom:30px;border-radius: 6px;}
 #result .sec .top .tt1{width:100px;vertical-align: top;}
@@ -17,8 +17,8 @@ span{display: inline-block;}
 #result .sec .top span.line_span{width:500px;display: inline-block;border-top:2px solid #ebce95;margin-top:10px;}
 #result .sec .top .tt{width:100px;vertical-align: top;}
 
-#result .header{font-size:22px;}
-#result .header h2{text-align: center;line-height: 60px;}
+#result .header{font-size:22px;color:#666;}
+#result .header h2{text-align: center;line-height: 60px;color:#fba400;}
 #result .header .tag{padding-right: 10px;width: auto;}
 #result .header .val{padding-right:40px;}
 
@@ -61,9 +61,9 @@ span{display: inline-block;}
 #result table.liunian .tgdz{color:#7d3d01;}
 
 
-#result .article h3{color:#e51c23;text-align: center;}
+#result .article h3{color:#e51c23;text-align: center;padding-bottom:10px;}
 #result .article p{text-indent: 2em;}
-#result .article p.hint{margin-top:20px;}
+#result .article p.hint{margin-top:10px;}
 #result .article p a{color:#0062cc;}
 
 
@@ -75,9 +75,10 @@ span{display: inline-block;}
 
 
   #result .header{margin-bottom: 30px;font-size:16px;}
-  #result .header h2{line-height: 60px;font-size: 22px;}
+  #result .header h2{line-height: 30px;font-size: 20px;padding-bottom: 10px;}
   #result .header .tag{padding-left:0;}
   #result .header .val{padding-right:5px;}
+  #result p{padding-bottom: 10px;}
 
   #result .sec .top .tt1{width:20vw;}
   #result .sec .top span.line_span{width:50vw;}
@@ -89,7 +90,7 @@ span{display: inline-block;}
 
   /* 乾造 */
   #result .info .tag_flow{width:10vw;}
-  #result .qz .attr_val{font-size: 20px;}
+  #result .qz .attr_val{font-size: 18px;}
   #result .qz .ps{font-size: 9px;}
 
 
@@ -100,7 +101,7 @@ span{display: inline-block;}
   #result table.liunian td{border:1px solid #e9a94f;line-height: 20px;}
 
 
-  
+  #result .article h3{font-size: 18px;padding-bottom: 10px; }
  
 
 
