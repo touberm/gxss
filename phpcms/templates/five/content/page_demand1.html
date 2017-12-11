@@ -1,0 +1,61 @@
+{template "content","header"}
+<link rel="stylesheet" href="/gxss/style/five/css/page_demand.css">
+<script>
+  $(function () {
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|BlackBerry|IEMobile|Opera Mini)/i)) {
+      $('.pc').hide();
+      $('.mobile').show();
+      console.log('mob');
+    } else {
+      $('.pc').show();
+      $('.mobile').hide();
+      console.log('pc1');
+    }
+  })
+</script>
+
+
+<div id="demand">
+  <div class="main">
+    <h2>个人信息</h2>
+    <p class="unit">
+      <span class="title">姓名:</span>
+      <input type="text" class="input">
+    </p>
+    <p class="unit">
+      <span class="title">性别:</span>
+      <div class="raido">
+        <label for=""></label>
+        <input type="radio" value='male' name="sex">
+        <label for=""></label>
+        <input type="radio" value="female" name="sex">
+      </div>
+    </p>
+
+    <p class="unit">
+      <span class="title">是否阴历:</span>
+      <div class="raido">
+        <label for=""></label>
+        <input type="radio" value='male' name="lunar">
+        <label for=""></label>
+        <input type="radio" value="female" name="lunar">
+      </div>
+    </p>
+    <p class="unit">
+      <span class="title">是否使用真太阳时:</span>
+      <div class="raido">
+        <label for=""></label>
+        <input type="radio" value='male' name="sun">
+        <label for=""></label>
+        <input type="radio" value="female" name="sun">
+      </div>
+    </p>
+
+  </div>
+</div>
+
+
+
+<script src="/gxss/style/five/js/page_demand1.js"></script>
+
+{template "content","footer"}
