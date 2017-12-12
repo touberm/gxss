@@ -1,5 +1,5 @@
 {template "content","header"}
-<link rel="stylesheet" href="/gxss/style/five/css/page_demand.css">
+<link rel="stylesheet" href="/gxss/style/five/css/page_demand1.css">
 <script>
   $(function () {
     if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|BlackBerry|IEMobile|Opera Mini)/i)) {
@@ -18,39 +18,79 @@
 <div id="demand">
   <div class="main">
     <h2>个人信息</h2>
-    <p class="unit">
-      <span class="title">姓名:</span>
-      <input type="text" class="input">
-    </p>
-    <p class="unit">
-      <span class="title">性别:</span>
-      <div class="raido">
-        <label for=""></label>
-        <input type="radio" value='male' name="sex">
-        <label for=""></label>
-        <input type="radio" value="female" name="sex">
+    <div class="unit">
+      <span class="title">姓&nbsp;&nbsp;名:</span>
+      <input type="text" class="input name"> 
+    </div>
+    <div class="unit">
+      <span class="title">性&nbsp;&nbsp;别:</span>
+      <div class="radio_body input">
+        <input type="radio" value='male' name="sex" class="radio_hide" id="male">
+        <label for="male" class="radio_btn">男</label>
+        <input type="radio" value="female" name="sex" class="radio_hide" id="female">
+        <label for="female" class="radio_btn">女</label>
       </div>
-    </p>
-
-    <p class="unit">
+    </div>
+    <!-- My97 -->
+      
+    <div class="unit pc">
+        <span class="title">出生日期:</span>
+        <script language="javascript" type="text/javascript" src="/gxss/style/five/js/datepicker/WdatePicker.js"></script>
+        <input class="input" id="d11" type="text" onClick="WdatePicker({dateFmt:'yyyy-M-d HH时',skin:'twoer',vel:'birth'})"/>
+    </div>
+    <input type="hidden" id="birth">
+    <div class="unit">
       <span class="title">是否阴历:</span>
-      <div class="raido">
-        <label for=""></label>
-        <input type="radio" value='male' name="lunar">
-        <label for=""></label>
-        <input type="radio" value="female" name="lunar">
+      <div class="radio_body input">
+        <input type="radio" value='lf' name="lunar" class="radio_hide" id="lf">
+        <label for="lf" class="radio_btn">否</label>
+        <input type="radio" value="lt" name="lunar" class="radio_hide" id="lt">
+        <label for="lt" class="radio_btn">是</label>
       </div>
-    </p>
-    <p class="unit">
+    </div>
+    <div class="unit ">
       <span class="title">是否使用真太阳时:</span>
-      <div class="raido">
-        <label for=""></label>
-        <input type="radio" value='male' name="sun">
-        <label for=""></label>
-        <input type="radio" value="female" name="sun">
+      <div class="radio_body input">
+        <input type="radio" value='sf' name="sun" class="radio_hide" id="sf">
+        <label for="sf" class="radio_btn">否</label>
+        <input type="radio" value="st" name="sun" class="radio_hide" id="st">
+        <label for="st" class="radio_btn">是</label>
+        
       </div>
-    </p>
+    </div>
 
+
+
+
+
+    <!-- csSelect -->
+    <fieldset id="global_location" class="clear_both unit pc place_unit">
+        <span class="title place_title">出生地:</span>
+        <div class="place input">
+          <select class="state place_select" data-first-title="选择省份" disabled="disabled"></select>
+          <select class="city place_select" disabled="disabled"></select>
+          <select class="region place_select" disabled="disabled"></select>
+        </div>
+      </fieldset>
+
+
+      <script src="http://www.jq22.com/jquery/2.1.1/jquery.min.js"></script>
+      
+      <script src="/gxss/style/five/js/cxSelect/jquery.cxselect.min.js"></script>
+      
+      <script>
+      
+      $.cxSelect.defaults.url = '/gxss/style/five/js/cxSelect/cityData.min.json';
+      $('#global_location').cxSelect({
+        url: '/gxss/style/five/js/cxSelect/cityData.min.json',
+        selects: [ 'state', 'city', 'region'],
+        nodata:'none'
+      });
+      </script>
+
+
+
+      <input type="button" name="submit" value="提交" class="sub">
   </div>
 </div>
 
