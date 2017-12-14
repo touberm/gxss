@@ -8,25 +8,26 @@ h1,h2,h3,h4,h5,h6,p,input,seletc,fieldset{margin:0;padding:0;}
 
 body{font-size: 16px;}
 #demand{background:#edd69f;padding:30px 0;}
-.main{width:100%;max-width: 1000px;margin:0 auto;background: #f9f4e8;text-align: center;}
-input{outline: none;padding-left:10px;display:inline-block;border-radius: 2px;border:1px solid #666;height:22px;}
+.main{width:100%;max-width: 1000px;margin:0 auto;background: #f9f4e8;text-align: center;padding-bottom:30px;}
+input{outline: none;padding-left:10px;display:inline-block;border-radius: 2px;border:1px solid #000;height:22px;}
 
 
-h2{font-weight: normal;padding-bottom: 20px;font-size: 18px;}
+h2{font-weight: normal;padding-bottom: 30px;font-size: 18px;padding-top:30px;}
 .unit{width:700px;text-align:center;padding-bottom: 20px;margin:0 auto;display: inline-block;padding-bottom:15px;height:40px;}
 .title{width:160px;text-align: right;display: inline-block;padding-right:10px;}
 .input{width:200px;}
 .name{display:inline-block;}
 .radio_body{display: inline-block;text-align: left;}
 .radio_hide{display: none;}
-.radio_btn{padding-left:22px;background-image:url('/gxss/style/five/images/demand/empty.png');background-repeat: no-repeat;background-position: left center;cursor: pointer;}
+.radio_btn{padding-left:22px;background-image:url('/gxss/style/five/images/demand/empty.png');background-repeat: no-repeat;background-position: left center;cursor: pointer;font-weight: normal;padding-right:10px;}
 
 
 .place_title{vertical-align: top;}
-.place{display:inline-block;vertical-align: top;height:100px;}
+.place{display:inline-block;vertical-align: top;height:70px;}
 .place_unit{height:auto;}
-.place_select{padding-left:10px;display: inline-block;width:200px;margin-bottom:10px;outline:none;}
+.place_select{padding-left:10px;display: inline-block;width:200px;margin-bottom:5px;outline:none;border:1px solid #000;border-radius: 2px;}
 
-.sub{display: block;width:180px;margin:0 auto;text-align:center;}
+.sub{padding-left:0;display: block;width:180px;margin:0 auto;text-align:center;background-color:#fff;height:26px;font-size:16px;line-height:26px;border-radius: 2px;color:#000;transition: all 0.6s;}
+.sub:hover{background:#666;color:#fff;}
 
 
